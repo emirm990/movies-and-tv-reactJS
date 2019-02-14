@@ -31,7 +31,7 @@ class Movies extends Component {
     this.setState({
       searchValue: event.target.value
     });
-    if (event.target.value.length > 3) {
+    if (event.target.value.length > 2) {
       let response = await fetch(
         "https://api.themoviedb.org/3/search/" +
           this.state.tvOrMovie +
