@@ -2,7 +2,7 @@
   "name": "movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://emirm990.github.io/moviesTVreact",
+  "homepage": "http://emirm990.github.io/movies-and-tv-reactJS",
   "dependencies": {
     "bootstrap": "^4.3.0",
     "react": "^16.8.1",
