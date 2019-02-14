@@ -2,7 +2,7 @@
   "name": "movies",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://emirm990.github.io/movies-and-tv-reactJS",
+  "homepage": "https://emirm990.github.io/movies-and-tv-reactJS",
   "dependencies": {
     "bootstrap": "^4.3.0",
     "react": "^16.8.1",
@@ -13,11 +13,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
