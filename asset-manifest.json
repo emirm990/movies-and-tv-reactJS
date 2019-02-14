@@ -1,15 +1,15 @@
 {
-  "main.css": "/movies-and-tv-reactJS/static/css/main.60845744.chunk.css",
-  "main.js": "/movies-and-tv-reactJS/static/js/main.3001a314.chunk.js",
-  "main.js.map": "/movies-and-tv-reactJS/static/js/main.3001a314.chunk.js.map",
-  "static/css/1.c55daac0.chunk.css": "/movies-and-tv-reactJS/static/css/1.c55daac0.chunk.css",
-  "static/js/1.0a41f8da.chunk.js": "/movies-and-tv-reactJS/static/js/1.0a41f8da.chunk.js",
-  "static/js/1.0a41f8da.chunk.js.map": "/movies-and-tv-reactJS/static/js/1.0a41f8da.chunk.js.map",
-  "runtime~main.js": "/movies-and-tv-reactJS/static/js/runtime~main.cb14b659.js",
-  "runtime~main.js.map": "/movies-and-tv-reactJS/static/js/runtime~main.cb14b659.js.map",
-  "static/css/1.c55daac0.chunk.css.map": "/movies-and-tv-reactJS/static/css/1.c55daac0.chunk.css.map",
-  "static/css/main.60845744.chunk.css.map": "/movies-and-tv-reactJS/static/css/main.60845744.chunk.css.map",
-  "index.html": "/movies-and-tv-reactJS/index.html",
-  "precache-manifest.4253a7f535ffaae13506c5c55c7669b4.js": "/movies-and-tv-reactJS/precache-manifest.4253a7f535ffaae13506c5c55c7669b4.js",
-  "service-worker.js": "/movies-and-tv-reactJS/service-worker.js"
+  "main.css": "/static/css/main.60845744.chunk.css",
+  "main.js": "/static/js/main.483aded0.chunk.js",
+  "main.js.map": "/static/js/main.483aded0.chunk.js.map",
+  "static/css/1.c55daac0.chunk.css": "/static/css/1.c55daac0.chunk.css",
+  "static/js/1.0a41f8da.chunk.js": "/static/js/1.0a41f8da.chunk.js",
+  "static/js/1.0a41f8da.chunk.js.map": "/static/js/1.0a41f8da.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/1.c55daac0.chunk.css.map": "/static/css/1.c55daac0.chunk.css.map",
+  "static/css/main.60845744.chunk.css.map": "/static/css/main.60845744.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.075fad89134d3a6a2db621a2e778aedc.js": "/precache-manifest.075fad89134d3a6a2db621a2e778aedc.js",
+  "service-worker.js": "/service-worker.js"
 }
