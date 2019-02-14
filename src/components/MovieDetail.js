@@ -37,6 +37,7 @@ class MovieDetails extends Component {
         <Link to={"/"}>
           <button className='btn btn-primary'>Back</button>
         </Link>
+        <hr />
         <div className='row justify-content-center '>
           <div className='col-xl-4 col-lg-6 col-md-8 col-sm-9'>
             <div className='card ' style={{ boxShadow: "1px 1px 1px #fff" }}>

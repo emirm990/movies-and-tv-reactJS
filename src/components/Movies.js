@@ -95,6 +95,7 @@ class Movies extends Component {
           >
             TV Shows
           </button>
+          <hr />
         </div>
         <div className='container-fluid mb-3'>
           <input
