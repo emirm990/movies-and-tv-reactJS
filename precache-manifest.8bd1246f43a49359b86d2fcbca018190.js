@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/movies-and-tv-reactJS/static/js/runtime~main.cb14b659.js"
   },
   {
-    "revision": "fe3b6690e1713f939432",
-    "url": "/movies-and-tv-reactJS/static/js/main.fe3b6690.chunk.js"
+    "revision": "29ca8ce5faa58d8a277c",
+    "url": "/movies-and-tv-reactJS/static/js/main.29ca8ce5.chunk.js"
   },
   {
     "revision": "0a41f8da99db56fce3df",
     "url": "/movies-and-tv-reactJS/static/js/1.0a41f8da.chunk.js"
   },
   {
-    "revision": "fe3b6690e1713f939432",
+    "revision": "29ca8ce5faa58d8a277c",
     "url": "/movies-and-tv-reactJS/static/css/main.60845744.chunk.css"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/movies-and-tv-reactJS/static/css/1.c55daac0.chunk.css"
   },
   {
-    "revision": "2635dab0b68ad585d44e10b56bf6b275",
+    "revision": "6a475bf1fbeffdb188e3553050a9442d",
     "url": "/movies-and-tv-reactJS/index.html"
   }
 ];
