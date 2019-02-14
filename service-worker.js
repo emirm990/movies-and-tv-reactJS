@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/moviesTVreact/precache-manifest.952e51dda0af8fe1840be50853fa769b.js"
+  "/movies-and-tv-reactJS/precache-manifest.4253a7f535ffaae13506c5c55c7669b4.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/moviesTVreact/index.html", {
+workbox.routing.registerNavigationRoute("/movies-and-tv-reactJS/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
