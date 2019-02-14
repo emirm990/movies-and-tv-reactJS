@@ -37,16 +37,20 @@ class MovieDetails extends Component {
         <Link to={"/"}>
           <button className='btn btn-primary'>Back</button>
         </Link>
-        <div className='row'>
-          <div className='card col-4 offset-4'>
-            <img
-              className='card-img-top img-fluid'
-              src={"http://image.tmdb.org/t/p/w400/" + this.state.poster}
-              alt={this.state.name}
-            />
-            <div className='card-body'>
-              <h4 className='card-title text-center mt-3'>{this.state.name}</h4>
-              <p className='card-text px-3 -pb-2'>{this.state.overview}</p>
+        <div className='row justify-content-center'>
+          <div className='col-lg-6 col-md-8 col-sm-9'>
+            <div className='card '>
+              <img
+                className='card-img-top img-fluid'
+                src={"http://image.tmdb.org/t/p/w400/" + this.state.poster}
+                alt={this.state.name}
+              />
+              <div className='card-body'>
+                <h4 className='card-title text-center mt-3'>
+                  {this.state.name}
+                </h4>
+                <p className='card-text px-3 -pb-2'>{this.state.overview}</p>
+              </div>
             </div>
           </div>
         </div>
