@@ -30,18 +30,16 @@ class MovieDetails extends Component {
         apiKey
     );
     let videosJson = await videos.json();
-    try {
-      if (
-        videosJson.results.length > 0 &&
-        videosJson.results[0].type === "Trailer"
-      ) {
-        this.setState({
-          trailer: videosJson.results[0].key
-        });
-      }
-    } catch (err) {
-      console.log(err);
+
+    if (
+      videosJson.results.length > 0 &&
+      videosJson.results[0].type === "Trailer"
+    ) {
+      this.setState({
+        trailer: videosJson.results[0].key
+      });
     }
+
     this.setState({
       poster: json.poster_path,
       name: json.name || json.title,
