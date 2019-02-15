@@ -3,7 +3,6 @@ import MovieDetail from "./MovieDetail";
 
 class Details extends Component {
   componentDidMount() {
-    console.log("mounted", this.props.history.location.results);
     this.setState({
       results: this.props.history.location.results,
       tvOrMovie: this.props.history.location.tvOrMovie,

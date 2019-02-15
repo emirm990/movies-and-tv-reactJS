@@ -51,7 +51,6 @@ class Movies extends Component {
     });
   }
   getId(id) {
-    console.log(id);
     this.setState({ clickedId: id });
   }
 

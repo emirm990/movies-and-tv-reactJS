@@ -45,7 +45,6 @@ class MovieDetails extends Component {
       name: json.name || json.title,
       overview: json.overview
     });
-    console.log(this.state);
   }
   componentDidMount() {
     this.id(this.props.id, this.props.tvOrMovie);
@@ -63,6 +62,7 @@ class MovieDetails extends Component {
               <div className='card ' style={{ boxShadow: "1px 1px 1px #fff" }}>
                 <div className='videoWrapper'>
                   <iframe
+                    title='trailer'
                     id='video'
                     width='560'
                     height='315'
