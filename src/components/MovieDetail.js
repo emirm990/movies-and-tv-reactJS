@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./iframe.css";
 class MovieDetails extends Component {
   state = {
-    trailer: "trailer",
-    poster: "poster",
+    trailer: null,
+    poster: null,
     name: "name",
     overview: "overview"
   };
@@ -16,12 +17,32 @@ class MovieDetails extends Component {
         id +
         "?api_key=" +
         apiKey +
-        "&language=en-US"
+        "&append_to_response=videos&language=en-US"
     );
     let json = await response.json();
-    console.log(json);
+
+    let videos = await fetch(
+      "http://api.themoviedb.org/3/" +
+        tvOrMovie +
+        "/" +
+        id +
+        "/videos?api_key=" +
+        apiKey
+    );
+    let videosJson = await videos.json();
+    try {
+      if (
+        videosJson.results.length > 0 &&
+        videosJson.results[0].type === "Trailer"
+      ) {
+        this.setState({
+          trailer: videosJson.results[0].key
+        });
+      }
+    } catch (err) {
+      console.log(err);
+    }
     this.setState({
-      trailer: json.trailer,
       poster: json.poster_path,
       name: json.name || json.title,
       overview: json.overview
@@ -32,31 +53,68 @@ class MovieDetails extends Component {
     this.id(this.props.id, this.props.tvOrMovie);
   }
   render() {
-    return (
-      <div className='container-fluid mb-3 mt-3'>
-        <Link to={"/"}>
-          <button className='btn btn-primary'>Back</button>
-        </Link>
-        <hr />
-        <div className='row justify-content-center '>
-          <div className='col-xl-4 col-lg-6 col-md-8 col-sm-9'>
-            <div className='card ' style={{ boxShadow: "1px 1px 1px #fff" }}>
-              <img
-                className='card-img-top img-fluid'
-                src={"http://image.tmdb.org/t/p/w400/" + this.state.poster}
-                alt={this.state.name}
-              />
-              <div className='card-body'>
-                <h4 className='card-title text-center mt-3'>
-                  {this.state.name}
-                </h4>
-                <p className='card-text px-3 -pb-2'>{this.state.overview}</p>
+    if (this.state.trailer != null) {
+      return (
+        <div className='container-fluid mb-3 mt-3'>
+          <Link to={"/"}>
+            <button className='btn btn-primary'>Back</button>
+          </Link>
+          <hr />
+          <div className='row justify-content-center '>
+            <div className='col-xl-4 col-lg-6 col-md-8 col-sm-9'>
+              <div className='card ' style={{ boxShadow: "1px 1px 1px #fff" }}>
+                <div className='videoWrapper'>
+                  <iframe
+                    id='video'
+                    width='560'
+                    height='315'
+                    src={"https://www.youtube.com/embed/" + this.state.trailer}
+                    frameBorder='0'
+                    allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'
+                    allowFullScreen
+                  />
+                </div>
+                <div className='card-body'>
+                  <h4 className='card-title text-center mt-3'>
+                    {this.state.name}
+                  </h4>
+                  <p className='card-text px-3 -pb-2'>{this.state.overview}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div className='container-fluid mb-3 mt-3'>
+          <Link to={"/"}>
+            <button className='btn btn-primary'>Back</button>
+          </Link>
+          <hr />
+          <div className='row justify-content-center '>
+            <div className='col-xl-4 col-lg-6 col-md-8 col-sm-9'>
+              <div className='card ' style={{ boxShadow: "1px 1px 1px #fff" }}>
+                {this.state.poster ? (
+                  <img
+                    className='card-img-top img-fluid'
+                    src={"http://image.tmdb.org/t/p/w400/" + this.state.poster}
+                    alt={this.state.name}
+                  />
+                ) : null}
+
+                <div className='card-body'>
+                  <h4 className='card-title text-center mt-3'>
+                    {this.state.name}
+                  </h4>
+                  <p className='card-text px-3 -pb-2'>{this.state.overview}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 
