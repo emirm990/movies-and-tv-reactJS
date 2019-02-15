@@ -1,7 +1,7 @@
 {
   "main.css": "/movies-and-tv-reactJS/static/css/main.ef4536d4.chunk.css",
-  "main.js": "/movies-and-tv-reactJS/static/js/main.7fc0fd7d.chunk.js",
-  "main.js.map": "/movies-and-tv-reactJS/static/js/main.7fc0fd7d.chunk.js.map",
+  "main.js": "/movies-and-tv-reactJS/static/js/main.61de5ed1.chunk.js",
+  "main.js.map": "/movies-and-tv-reactJS/static/js/main.61de5ed1.chunk.js.map",
   "static/css/1.28a927b3.chunk.css": "/movies-and-tv-reactJS/static/css/1.28a927b3.chunk.css",
   "static/js/1.ff378934.chunk.js": "/movies-and-tv-reactJS/static/js/1.ff378934.chunk.js",
   "static/js/1.ff378934.chunk.js.map": "/movies-and-tv-reactJS/static/js/1.ff378934.chunk.js.map",
@@ -10,6 +10,6 @@
   "static/css/1.28a927b3.chunk.css.map": "/movies-and-tv-reactJS/static/css/1.28a927b3.chunk.css.map",
   "static/css/main.ef4536d4.chunk.css.map": "/movies-and-tv-reactJS/static/css/main.ef4536d4.chunk.css.map",
   "index.html": "/movies-and-tv-reactJS/index.html",
-  "precache-manifest.893fc74c4400bf4dcfb775f5b9894132.js": "/movies-and-tv-reactJS/precache-manifest.893fc74c4400bf4dcfb775f5b9894132.js",
+  "precache-manifest.a96296de170c729d8f706bba77a6475b.js": "/movies-and-tv-reactJS/precache-manifest.a96296de170c729d8f706bba77a6475b.js",
   "service-worker.js": "/movies-and-tv-reactJS/service-worker.js"
 }
