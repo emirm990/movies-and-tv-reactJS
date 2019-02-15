@@ -22,7 +22,7 @@ class MovieDetails extends Component {
     let json = await response.json();
 
     let videos = await fetch(
-      "http://api.themoviedb.org/3/" +
+      "https://api.themoviedb.org/3/" +
         tvOrMovie +
         "/" +
         id +
