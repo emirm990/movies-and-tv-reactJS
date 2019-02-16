@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/movies-and-tv-reactJS/precache-manifest.a96296de170c729d8f706bba77a6475b.js"
+  "/movies-and-tv-reactJS/precache-manifest.a5bcc6a784a1cd43752aacde7c8bba2e.js"
 );
 
 workbox.clientsClaim();
