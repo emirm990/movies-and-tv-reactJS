@@ -52,6 +52,7 @@ class Movies extends Component {
   }
   getId(id) {
     this.setState({ clickedId: id });
+    this.props.history.push(id);
   }
 
   componentDidMount() {
@@ -64,7 +65,9 @@ class Movies extends Component {
         searchValue: this.props.history.location.searchValue
       });
     }
+    this.props.history.push(this.state);
   }
+
   componentWillUnmount() {
     this.props.history.push(this.state);
   }

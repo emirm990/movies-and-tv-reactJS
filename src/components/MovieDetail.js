@@ -2,12 +2,27 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./iframe.css";
 class MovieDetails extends Component {
-  state = {
-    trailer: null,
-    poster: null,
-    name: "name",
-    overview: "overview"
-  };
+  constructor(props) {
+    super(props);
+    const localId = localStorage.getItem("id");
+    const localTvOrMovie = localStorage.getItem("tvOrMovie");
+    console.log(localId, localTvOrMovie);
+    if (localId) {
+      this.state = {
+        id: localId,
+        tvOrMovie: localTvOrMovie
+      };
+    } else {
+      this.state = {
+        id: null,
+        trailer: null,
+        poster: null,
+        name: "name",
+        overview: "overview"
+      };
+    }
+  }
+
   async id(id, tvOrMovie) {
     let apiKey = "fdcceaee503d65d10f646f384fbc9aec";
     let response = await fetch(
@@ -47,7 +62,19 @@ class MovieDetails extends Component {
     });
   }
   componentDidMount() {
-    this.id(this.props.id, this.props.tvOrMovie);
+    console.log(localStorage.id, localStorage.tvOrMovie);
+    if (this.props.id === undefined || this.props.tvOrMovie === undefined) {
+      this.id(localStorage.id, localStorage.tvOrMovie);
+    } else {
+      this.id(this.props.id, this.props.tvOrMovie);
+    }
+    this.setState({ id: this.props.id });
+    console.log(localStorage.id, localStorage.tvOrMovie);
+  }
+  componentWillUnmount() {
+    localStorage.setItem("id", this.state.id);
+    localStorage.setItem("tvOrMovie", this.props.tvOrMovie);
+    console.log(localStorage.id, localStorage.tvOrMovie);
   }
   render() {
     if (this.state.trailer != null) {

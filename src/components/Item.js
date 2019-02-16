@@ -7,7 +7,7 @@ class Item extends Component {
     return (
       <Link
         to={{
-          pathname: "/details",
+          pathname: "/details/",
           id: this.props.id,
           tvOrMovie: this.props.tvOrMovie
         }}
